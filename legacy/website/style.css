@@ -1,0 +1,101 @@
+{
+       margin: 0; 
+       padding: 0;
+}
+
+#wrapper {
+	margin: 20px;
+}
+
+#header { 
+	background-color: white;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 20px;
+	height: 150px;
+	padding-bottom: 25px;
+	border-bottom: 2px groove purple; 
+}
+    
+#content { 
+	border-color: #663399;
+	border-width: 10px;
+	height: 100%;
+	
+}
+
+#headernav {
+	position: relative;
+	left: 100px;
+	top: 30px;
+}
+	
+#nav {
+	display: block;
+	border-top: 2px solid #663399;
+	border-bottom: 2px solid #663399;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+	
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+		
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-size: 50px
+	
+}
+
+li a:hover {
+    color: purple;
+}
+
+#headerlogo {
+	float: left;
+	position: relative;
+}
+
+#logo {
+	display: inline-block;
+	
+}
+
+#logotext {
+	position: block;
+	
+}	
+
+#logotext a {
+	text-decoration: none;
+	color: black;
+}
+
+#footer {
+	position: static;
+	background-color: black;
+	display: block;
+	
+}
+
+.text {
+	font-family: "Ovo", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.writingrow {
+	
+}

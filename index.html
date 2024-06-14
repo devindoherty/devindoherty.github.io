@@ -1,0 +1,42 @@
+<!doctype html> 
+<html lang ="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devin Doherty: The Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body id="fullbody">
+    <div id="wrapper">
+      <header id="header">
+        <h1>Wonderful Website Adventure</h1>
+        <h2>Explore At Your Own Risk</h2>
+        <h3>By Devin Doherty</h3>
+      </header>
+      <div id="content">
+        <div id = "buffer">
+          <h4>A Dark Room</h4>
+          <p>You find yourself in a dimly lit room. A sudden flash of blue light illuminates exits 
+            on the walls helpfully labelled <a><b>Writing</b></a>, <a><b>Games</b></a>, <a><b>Journal</b></a>, and <a><b>About</b></a>.
+          </p>
+          <p id="torchblurb">
+            You see a torch here.
+          </p>
+          <p>
+            <i>Hint: You can try typing 'get torch', 'help', or 'explore games'.</i>
+          </p>
+        </div>
+        <br>
+        <div id="prompt">
+          <label>></label>
+          <input type="text" id="cmd" onkeydown="input()" autocomplete="off" autofocus>
+        </div>
+      </div>
+    </div>
+    <script src="adventure.js"></script>
+  </body>
+</html>

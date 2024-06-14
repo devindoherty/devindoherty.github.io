@@ -1,0 +1,43 @@
+#wrapper {
+	margin: 20px;
+	background-color: black;
+	border-color: green;
+}
+
+#fullbody {
+	background-color: black;
+	font-family: 'VT323', monospace;
+}
+
+    
+#content { 
+    color: green;
+	background-color: black;
+}
+
+a {
+	color: lightgreen;
+}
+
+#header{
+	color: green;
+	background-color: black;
+}
+
+#prompt {
+	position: relative;
+	bottom: 0px;
+	background-color: black;
+	color: green;
+}
+
+#cmd {
+	background-color: black;
+	caret-color: green;
+	caret-shape: block;
+	color: green;
+	outline: none;
+	border: none;
+	font-family: 'VT323', monospace;
+	width: 50%;
+}
