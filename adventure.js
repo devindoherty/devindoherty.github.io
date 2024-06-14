@@ -35,7 +35,7 @@ function input() {
             buffer.innerHTML += "The spider says, 'I've read it. I'd give it a pass, if I were you.'" + "<br>"
         }
         else if (command.includes("games")) {
-            buffer.innerHTML += "An old Dell hooked up to a hamster wheel for power is playing some kind of text based adventure called <a href='../CelinaSolution/index.html'>Celina Solution</a>. The hamster looks up at you, exhausted." + "<br>" + "A note on the wall reads: Beware of the Grue" + "<br>"
+            buffer.innerHTML += "An old Dell hooked up to a hamster wheel for power is playing some kind of text based adventure called <a href='CelinaSolution/index.html'>Celina Solution</a>. The hamster looks up at you, exhausted." + "<br>" + "A note on the wall reads: Beware of the Grue" + "<br>"
         }
         else if (command.includes("journal")) {
             buffer.innerHTML += "The tattered writings of a madman are strewn about this padded cell." + "<br>"

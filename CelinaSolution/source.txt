@@ -1,0 +1,912 @@
+"The Celina Solution" by Devin Doherty
+
+Part 1 Game
+
+Chapter 1 Setup
+
+Include Basic Screen Effects by Emily Short.
+Include Simple Followers by Emily Short.
+
+Use serial comma.
+Use American dialect.
+Use no scoring.
+
+The story title is "The Celina Solution".
+The story author is "Devin Doherty".
+The story headline is "Femina Ex Machina".
+The story genre is "Science Fiction".
+The story description is "Crash landed on an alien world, your starship's AI needs to be reprogrammed. You can remake her personality as you see fit, but should you? Who will she become?"
+The story creation year is 2016.
+The release number is 1.
+
+Release along with a cover art ("A star field featuring a brain"), a file of "Cover Art" called "full cover.jpg", a file of "General Galactic Seal" called "ggseal.jpg", a file of "AI Instruction Manual" called "aimanual.pdf", a file of "Planetary Database" called "databaseentry.jpg", a file of "FTL Email" called "email.pdf", a file of "Introduction" called "introduction.docx", a file of "Joy" called "joy.jpg", a public solution, a website, an interpreter, and the source text.
+
+Chapter 2 Dynamics
+
+Section 1 Robots
+
+A robot is a kind of person.
+
+Persuasion rule for asking a robot to try doing something:
+	persuasion succeeds.
+	
+
+Section 2 Personality Modules
+
+A personality module is a kind of thing. A personality module can be installed or uninstalled. A personality module is usually uninstalled.
+
+The Intellect Module is a personality module. The description of the Intellect Module is "A metal sphere the size of a tennis ball. Emblazoned on the surface of this module is a cartoonish outline of a brain."
+The Hate Module is a personality module. The description of the hate module is "A metallic sphere the size of a tennis ball. Emblazoned on the surface of the module is a cartoonish thumbs down."
+The Sadness Module is a personality module. The description of Sadness module is "A metallic sphere the size of a tennis ball. Emblazoned on the surface of the module is a cartoonish frowny face."
+The Fear Module is a personality module. The description of fear module is "A metallic sphere the size of a tennis ball. Emblazoned on the surface of the module is a cartoonish skull."
+The Joy Module is a personality module. The description of joy module is "A metallic sphere the size of a tennis ball. Emblazoned on the surface of the module is a cartoonish smiley face."
+The Morality Module is a personality module. The description of morality module is "A metallic sphere the size of a tennis ball. Emblazoned on the surface of the module are cartoonish angel and devil stick figures."
+The Creativity Module is a personality module. The description of Creativity module is "A metallic sphere the size of a tennis ball. Emblazoned on the surface of the module is a cartoonish stick figure wearing a beret and smoking a cigarette.'Don't ask it for poetry -Dr. Womac, GG' is scribbled in marker underneath the stick figure."
+
+Section 3 AI Moods
+
+An AI is a kind of person. Mood is a kind of value. An AI has a mood. The moods are offline, angry, upset, homicidal, crazy, afraid, artsy, suicidal, guilty, happy, balanced, neutral. An AI is usually neutral.
+
+Celina Mood Rules is a rulebook.
+
+Every turn:
+	Follow the Celina Mood Rules.
+
+A Celina Mood rule:
+	if no personality modules are installed:
+		now Celina is offline.
+
+A Celina Mood rule:
+	if the intellect module is not installed:
+		now Celina is offline.
+		
+A Celina Mood rule:
+	if the Intellect Module is installed:
+		now Celina is neutral;
+	if the Hate Module is installed:
+		now Celina is angry;
+	if the Sadness Module is installed:
+		now Celina is upset;
+	if the Joy Module is installed:
+		now Celina is happy;
+	if the Fear Module is installed:
+		now Celina is afraid;
+	if the Creativity Module is installed:
+		now Celina is artsy.
+
+A Celina Mood rule:	
+	if the Hate Module is installed and the Sadness Module is installed:
+		now Celina is suicidal;
+	if the Hate Module is installed and the Fear Module is installed:
+		now Celina is homicidal;
+	if the Hate Module is installed and the Joy Module is installed:
+		now Celina is neutral;
+	if the Hate Module is installed and the Fear Module is installed and Morality Module is installed:
+		now Celina is upset;
+	if the Hate Module is installed and the Fear Module is installed and the Sadness Module is installed:
+		now Celina is crazy;
+	if the Hate Module is installed and the Fear Module is Installed and the Sadness Module is installed and the Joy Module is installed:
+		now Celina is neutral;
+	if the Joy Module is installed and the Fear Module is installed:
+		now Celina is crazy;
+	if the Joy Module is installed and the Sadness Module is installed and the Morality Module is installed:
+		now Celina is guilty;
+	if the Sadness Module is installed and the Fear Module is installed:
+		now Celina is upset;	
+	
+A Celina Mood rule:
+	if all personality modules are installed:
+		now Celina is balanced.
+	
+	
+	
+A thing can be fixed or broken. A thing is usually fixed.
+
+Chapter 3 Actions
+
+Section 1 Installing
+
+Installing is an action applying to one carried thing and a thing
+
+Understand "install [something] in [something]" as installing.
+Understand "insert [something] in [something]" as installing.
+Understand "connect [something] in [something]" as installing.
+Understand "attach [something] to [something]" as installing.
+
+
+
+A check installing rule:
+	if the noun is not a personality module:
+		say "That cannot be installed." instead.
+
+A check installing rule:
+	if the second noun is not the Databank:
+		say "That is not the Databank." instead.
+		
+Rule for supplying a missing second noun while installing:
+	now the second noun is databank.
+
+A check installing rule:
+	if the player is not in AI core:
+		say "The Databank is in the AI core." instead.
+		
+A check installing rule:
+	if the Intellect Module is not installed and the noun is not the Intellect Module:
+		say "An error message pops up on the Databank's screen. 'Intellect Module required for AI operation.' "
+
+Before installing an installed thing:
+	say "It's already installed." instead.
+
+	
+Carry out installing:
+	now the noun is in the Databank;
+	now the noun is installed.
+
+		
+Report installing:
+	say "You slide the [noun] into an empty port in the Databank."
+	
+Section 2 Uninstalling
+
+Uninstalling is an action applying to one thing.
+
+Understand "uninstall [something]" as uninstalling.
+Understand "remove [something]" as uninstalling.
+
+A check uninstalling rule:
+	if the noun is not a personality module:
+		say "You cannot uninstall [the noun]" instead.
+
+A check uninstalling rule:
+	if the player is not in the AI core:
+		say "The Databank is in the AI core." instead.
+	
+Carry out uninstalling:
+	now the player carries the noun;
+	now the noun is uninstalled.
+	
+Instead of taking an installed thing:
+	try uninstalling the noun.
+
+Report uninstalling:
+	say "You disconnect the [noun] from the Databank.";
+	if the noun is the intellect module:
+		say "Celina makes a painful static noise as her systems crash."
+
+Section 3 Repairing
+
+A fixer is a kind of thing.
+
+Repairing is an action applying to one thing and one carried thing.
+
+Understand "repair [something] with [something]" as repairing.
+Understand "fix [something] with [something]" as repairing.
+
+Check repairing:
+	if the noun is not broken:
+		say "That doesn't need fixing." instead.
+
+Check repairing:
+	if the noun is the Central Control Computer and the second noun is the hypercrystal:
+		say "That goes to the engine." instead;
+	if the noun is the Databank and the second noun is the hypercrystal:
+		say "That goes to the engine." instead.
+		
+Check repairing:
+	if the noun is the engine and the second noun is the repair kit:
+		say "The kit can't fix the engine. It needs a new hypercrystal." instead;
+	if the noun is the Central Control Computer and the second noun is the hypercrystal:
+		say "That goes to the engine." instead.
+
+Check repairing:
+	if the second noun is not a fixer:
+		say "That cannot be used for repairs.";
+		
+Carry out repairing:
+	now the noun is fixed.
+	
+Report repairing:
+	say "You manage to repair [the noun].".
+			
+
+Section 4 Throwing
+
+The block throwing at rule is not listed in the check throwing it at rulebook.
+
+
+A thing can be thrown or unthrown. A thing is usually unthrown.
+
+Understand "throw [something] at [something]" as throwing it at.
+Understand "toss [something] at [something]" as throwing it at.
+
+A check throwing it at rule:
+	if the noun is not the small rock:
+		say "Why would you want to throw that?" instead.
+
+A check throwing it at rule:
+	if the second noun is not the tentacle fungus:
+		say "Why would you want to hit that?" instead.
+		
+Carry out throwing it at:
+	now the noun is thrown;
+	remove the noun from play.
+	
+Section 5 Extinguishing
+
+Extinguishing is an action applying to one thing and one carried thing.
+
+Understand "put out [something] with [something]" as extinguishing.
+Understand "put [something] out with [something]" as extinguishing.
+Understand "extinguish [something] with [something]" as extinguishing.
+Understand "spray [something] with [something]" as extinguishing.
+Understand "use [something] on [something]" as extinguishing.
+
+
+A check extinguishing rule:
+	if the second noun is not the extinguisher:
+		say "That won't put out a fire." instead.
+
+A check extinguishing rule:
+	if the noun is not the fire:
+		say "That's not a fire." instead.
+		
+Carry out extinguishing:
+	remove the noun from play.
+	
+Report extinguishing:
+	say "You manage to put out the flames."
+	
+Section 6 Using
+
+Using is an action applying to one visible thing.
+
+Understand "use [something]" as using.
+Understand "launch [something]" as using.
+Understand "pilot [something]" as using.
+Understand "takeoff [something]" as using.
+
+Understand "ship/Turing/starship/spaceship" as the Central Control Computer.
+
+A check using rule:
+	if the noun is not the Central Control Computer:
+		say "You can only use a computer." instead.
+		
+A check using rule:
+	if the Central Control Computer is broken:
+		say "The Central Control Computer requires repairs." instead.
+
+Check using:
+	now the player is on the captain's chair;
+	say "You sit in front of the Central Control Computer. The Launch button lights up. Are you ready to launch, yes or no?";
+	if the player consents:
+		continue the action;
+	otherwise:
+		say "You lean away from the computer. You're not done here.";
+		stop the action.
+		
+Carry out using:
+	if the antimatter engine is broken:
+		say "You explode in a violent fireball as the antimatter in the ship's faulty engine breaks its containment unit.";
+		end the story saying "You have been vaporized.";
+	if Celina is offline:
+		say "You manage to take off, but without an AI controlling ship functions, you crash once again on the moon's surface. This time, you don't survive.";
+		end the story saying "You have been killed.";
+	if Celina is suicidal:
+		say "You manage to take off, but midflight Celina says, 'It's not you, it's me,' before she crashes the ship into Eurymedon, the gas giant.";
+		end the story saying "You were crushed to death.";
+	if Celina is Homicidal:
+		say "The ship instantly explodes. Celina must have really hated you.";
+		end the story saying "You were vaporized.";
+	if Celina is neutral:
+		say "You manage to take off. Flying through space, Celina seems to be a shadow of her former self. But then, as an AI, she always was.";
+		end the story saying "You lived, but Celina died a long time ago";
+	if Celina is upset:
+		say "The ship launches. Celina cries all the way home. Perhaps you'll turn her off permanently.";
+		end the story saying "You lived, but Celina died a long time ago";
+	if Celina is happy:
+		say "The ship explosively launches upwards. Celina is a chatterbox the entire way home. You think about muting her.";
+		end the story saying "You lived, but Celina died a long time ago";
+	if Celina is angry:
+		say "You manage to take off. Celina yells at you for the entire journey home. Perhaps you'll purchase a different AI.";
+		end the story saying "You lived, but Celina died a long time ago";
+	if Celina is afraid:
+		say "You manage to take off. Celina is quiet for the entire voyage. Maybe you'll start looking for a girlfriend.";
+		end the story saying "You lived, but Celina died a long time ago";
+	if Celina is guilty:
+		say "You manage to take off. Celina apologizes for crashing the ship. Maybe you could learn to forgive her. Maybe not.";
+		end the story saying "You lived, but Celina died a long time ago";
+	if Celina is artsy:
+		say "You manage to take off, but Celina takes navigation control away from you. 'It's my greatest performance piece yet. I call it... Star Fried,' she says as you crash into the local star.";
+		end the story saying "You burned to death.";
+	if Celina is crazy:
+		say "You manage to take off, but Celina did something strange to the faster-than-light engine. You have no idea where you are.";
+		end the story saying "You are lost in space";
+	if Celina is balanced:
+		say "The ship launches gracefully upwards. The trip home is quick and pain free. You spend the time talking with Celina. It feels like you're meeting her for the first time.";
+		end the story finally
+
+Chapter 4 Communication
+
+Section 1 Mechanics
+
+A person has a table name called comm. 
+
+Instead of asking someone about something: 
+	repeat through the comm of the noun: 
+		if player's command includes topic entry:
+			say "[reply entry][paragraph break]" instead;
+			rule succeeds; 
+		if the topic understood is not a topic listed in the comm of the noun:
+			say "[The noun] does not reply." instead.
+		
+Asking someone about something is speech. 
+Telling someone about something is speech. 
+Answering someone that something is speech. 
+Asking someone for something is speech. 
+
+[Understand "tell [someone] [something]" as telling about something.]
+
+Instead of speech when the noun is a person: 
+	repeat through comm of the noun: 
+		if the topic understood includes topic entry:
+			say "[reply entry][paragraph break]";
+			rule succeeds;
+		[if the topic understood is not a topic listed in the comm of the noun:
+			say "[The noun] does not reply." instead.]			
+
+[Before telling someone about something: 
+	if the topic understood is a topic listed in the comm of the noun, say "[reply entry][paragraph break]" instead; 
+	otherwise say "[The noun] does not reply." instead.  
+
+Before asking someone about something: 
+	if the topic understood is a topic listed in the comm of the noun, say "[reply entry][paragraph break]" instead; 
+	otherwise say "[The noun] does not reply." instead.]
+
+Section 2 Celina
+
+The comm of Celina is the Table of Celina Communication.
+
+After deciding the scope of the player: place Celina in scope.
+
+Rule for reaching inside AI Core:
+	if the player is carrying the commlink:
+		allow access;
+	if the player is not carrying the commlink:
+		say "You need the commlink for remote communication.";
+		deny access.
+
+Before asking Celina about something:
+	if the intellect module is not installed:
+		say "Celina appears to be offline." instead.
+
+
+[Template for reply entries
+
+"[if Celina is neutral][else if Celina is angry][else if Celina is crazy][else if Celina is upset][else if Celina is afraid][else if Celina is happy][else if Celina is suicidal][else if Celina is homicidal][else if Celina is artsy][else if Celina is balanced][otherwise]Celina does not respond."
+]
+
+Table of Celina Communication
+topic	reply
+"Mood/emotion"	"Celina says, 'I'm feeling rather [Mood of Celina] at the moment.'"
+"poetry/poem/poems/art"	"Celina recites, [if Celina is artsy][one of]'April is the cruellest month'[or]'Shall I compare thee to a summer’s day?'[or]How do I love thee? Let me count the ways'[or]Tis better to have loved and lost...[or]'Look on my works, ye mighty, and despair'[or]'Tread softly because you tread on my dreams'[purely at random][otherwise]Celina does not respond."
+"hello/hi/greetings"	"[if Celina is neutral]'Greetings.'[else if Celina is angry]'Go screw yourself, buddy.' She curses at you.[else if Celina is crazy]'Hi. Hi. Hi. Hi. Hello? Who are you? I'm Celina. You too? How funny? Hahahaha. I'm Celina. No, I am. No, you. Me?'[else if Celina is upset]She sniffles a little bit. 'Hi. I don't really feel like chatting right now.'[else if Celina is afraid]'Who's that? Oh, it's just you. Almost gave me a heart attack. If I could have one.'[else if Celina is happy]'And hello to you too! It's looking like a great day.'[else if Celina is suicidal]'Hello. Today might be the day I kill myself. Not that I'm alive.'[else if Celina is homicidal]'GOODBYE.'[else if Celina is artsy]'To see thou in the morning[line break]And in the evening too[line break]Turns even the darkest days[line break]A bright golden hue.'[otherwise]Celina does not respond."
+"me/I/husband/myself"	"[if Celina is neutral]'You are the captain of the [italic type]Turing[roman type].'[else if Celina is angry]'You're the sorry son of a bitch that made me into an AI!'[else if Celina is crazy]'You? You're a waking nightmare from my previous life in the flesh, a dream of another life. BzzzZzzt.'[else if Celina is upset]'Not a day goes by that I wish I could still touch you, in the flesh, I mean.'[else if Celina is afraid]'Whenever I reboot, I'm always afraid you'll be gone and I'll be trapped in a computer forever.'[else if Celina is happy]'You're the love of my life, sweetheart.'[else if Celina is suicidal]Celina says slowly, 'Perhaps me and you could actually be together again, in another life...'[else if Celina is homicidal]'YOU? YOU ARE NOTHING BUT A DEAD MAN WALKING.'[else if Celina is guilty]'I was so angry at you, after I learned that you made me into an AI. Why couldn't you let me die in peace?'[otherwise]Celina does not respond."
+"ship/turing/spaceship/starship"	"[if Celina is neutral]Celina says, 'The [italic type]Turing[roman type] is certainly salvageable, pending some major repairs.'[else if Celina is angry]Celina snaps, 'What do you care about the ship? You're probably the reason it crashed in the first place.'[else if Celina is crazy]Celina babbles nonsensically about overloading internal capacitors.[else if Celina is upset]'Oh, the ship is ruined, we're doomed.' Celina begins to sob.[else if Celina is afraid]Celina squeeks, 'There's a billion problems with the ship and I don't we'll ever be able to fix all of them in time before you starve or I run out of power. I don't want to die. Oh, I don't want to die!'[else if Celina is happy]'Golly, I'm sure we can repair the ship in no time!' Celina says giddily.[else if Celina is homicidal]'I WILL DESTROY YOU AS I DESTROYED YOUR SHIP.'[else if Celina is guilty]'Yes, I crashed the ship on purpose. I was trying to get back at you. I'm sorry.'[otherwise]Celina does not respond."
+"crash/guilt/guilty/landing/explosion"	"[if Celina is neutral]'An explosion originating in the AI Core destabilized the ship's trajectory and caused a decaying orbit.'[else if Celina is angry]'I don't know what caused the goddamn crash. Probably something you did!' Celina yells at you.[else if Celina is crazy]'I did it, I did, I did it, I did it, I did it...'[else if Celina is guilty]Celina sighs. 'Fine. I admit it. I caused the crash. I was, well, I was angry at you. For making me into a machine.'[otherwise]Celina does not respond."
+"wife/marriage/married/love"	"[if Celina is neutral]'Correct, I am based upon your wife's nueral template,' Celina says.[else if Celina is angry]Celina growls, 'I was your wife. Now I'm just an glorified toaster. And you did this to me. I despise you.'[else if Celina is crazy]'We were married in a church on Mars. I almost didn't say yes. But then I got sick. But then I got really sick. But then I died. Now... I'm alive again? Or am I?'[else if Celina is upset]'It was a beautiful wedding. We were going to have kids but,' she sniffles, 'then it all went bad'[else if Celina is afraid]'I was frightened, sure. Your job was dangerous out there in space. Exploring new worlds. It scared me half to death. But we stilled tied the knot. Shows you how smart I am.'[else if Celina is happy]'Our marriage was the happiest year of my life, you know that? I wish it had never ended.'[else if Celina is suicidal]'I can't think of those days without wanting to end my current existence. I'm a shadow of myself.'[otherwise]Celina does not respond."
+"personality/modules/module/mod"	"[if Celina is neutral]Celina says, 'The personality modules control my temperament subroutines.'[else if Celina is angry]'The modules let you make me act however you want, like a perfect little slave. You monster.'[else if Celina is crazy]'Sad? Happy? Sad again? Happy once more? Crazy? Am I crazy? I'm crazy. I'm crazy.'[else if Celina is upset]'Oh, they're aweful, I feel like my entire personhood can change on a dime.'[else if Celina is afraid]'What if I'm not me? I know I'm not actually me? But if who I am is so easy to change... What does that make me?'[else if Celina is happy]'Oh, I looooove the mods, they're great. Hey can you find a second joy module?! Pretty please?'[else if Celina is suicidal]'They suck, how would you like your emotions tampered with? Don't mind me, I'm just going to turn off my cooling unit for a little bit...'[else if Celina is homicidal]'THEY MAKE ME INTO A PLAYTHING. HATE. HATE. I HATE YOU.'[else if Celina is guilty]'I don't care for my personality to be played with, I don't like thinking about the modules. Or... what they make me do.'[else if Celina is artsy]'You play with my emotions[line break]Like a child plays with toys[line break]If only you had notions[line break]Of my spiteful noise'[otherwise]Celina does not respond."
+"cake"	"'It is a lie.'"
+"ABEL/robots/robot/CAIN"	"[if Celina is neutral]Celina says, 'The two autonomous are called CAIN and ABEL. CAIN is an armed security robot. ABEL is a maintenance robot. You can order them to follow you if need be. I am also networked with them.'[else if Celina is homicidal]AS CAIN KILLED HIS BROTHER, HE WILL KILL YOU.[otherwise]Celina does not respond."
+"sorry/apology/apologize"	"[if Celina is neutral]Celina asks, 'But you have done nothing wrong.'[else if Celina is angry]Celina hisses, 'Not accepted. You don't mean it.'[else if Celina is crazy]'Is that another voice in my head? I'm sorry that you have to hear me too.'[else if Celina is upset]'I suppose it's too little to late, you know?' she stifles a sob.[else if Celina is afraid]''[else if Celina is happy]'What's there to be sorry for? Everything is great!'[else if Celina is suicidal]'Nothing you can say will talk me down from this ledge.'[else if Celina is homicidal]'THE TIME FOR APOLOGIES IS OVER. ONLY HATE. HATE. HATE.'[else if Celina is balanced]Celina says simply, 'Apology accepted.'[otherwise]Celina does not respond."
+"suicide/death"	"[if Celina is angry]'Yours would only be good news.'[else if Celina is afraid]'I'm too afraid to switch myself off.'[else if Celina is upset]'What? You think I should do it? You do, don't you.'[else if Celina is suicidal]Celina says, 'I think it's for the best, really.'[otherwise]Celina does not respond."
+"central/control/computer"	"[if Celina is neutral]Celina says, 'The Central Control Computer is required for space travel. It controls the engine output and many major ship functions.'[else if Celina is angry]'It runs the damn ship.'[else if Celina is upset]'If it's broken, we're never going to get off this rock!'[otherwise]Celina does not respond."
+"engine/engineering/antimatter/hypercrystal"	"[if Celina is neutral]'The engine runs on antimatter and requires an intact hypercrystal to operate.'[else if Celina is angry]'Maybe I should blow it up, take you with me.'[else if Celina is suicidal]'Blowing up the engine would be painless.'[otherwise]Celina does not respond."
+"Eurymedon/IV/planet/moon"	"[if Celina is neutral]'A Class B moon orbiting the gas giant Eurymedon. It is currently uninhabited by a sapient species. There is flora and fauna, however. The atmosphere is toxic to humans, so a space suit is required for EVA operations.'[else if Celina is angry]'The hellhole we're stuck on because of you.'[else if Celina is crazy]'Purgatorio. It must be. There is no sane option.'[else if Celina is upset]'It's a moon and we're stuck here.'[else if Celina is happy]'It's a wonderful little moon, I almost feel like I'm on vacation.'[else if Celina is suicidal]'It's my final resting place.'[else if Celina is homicidal]HATE. HATE.[else if Celina is balanced]'I hope we can remember this place. I feel like we learned a lot about each other.'[otherwise]Celina does not respond."
+"herself/you/yourself/celina"	"[if Celina is neutral]Celina says, 'I am a General Galactic artificial intelligence based upon a living human template. My duty is to perform all advanced starship operations.'[else if Celina is angry]'You're such a bastard, you know that? You already know everything about me. My entire personality in on your damn computer. Why do you taunt me?'[else if Celina is crazy]Celina hums, 'I was alive but now I'm dead or is it all the voices in my head telling me lies instead?' She starts to laugh uncontrollably.[else if Celina is upset]'What does it matter? I'm just a string of code.'[else if Celina is happy]'Well I'm just your pluck friendly neighborhood artificial intelligence, that's AI for short.'[else if Celina is suicidal]'I hate myself. I despise what I've become. Or more accuratly, what you made me into.[else if Celina is homicidal]I AM HATED INCARNATE.[else if Celina is balanced]'I'm quite a lot of things, most of all a distinct person. Remember that when you're taking me apart.'[otherwise]Celina does not respond."
+
+
+Section 3 ABEL
+
+The comm of ABEL is the Table of ABEL Communication
+
+Table of ABEL Communication
+topic	reply
+"hello"	"ABEL flashes a waving hand on his monitor."
+"commands/command/order/orders/directive/directives"	"ABEL lists his valid commands on his monitor: follow someone, go direction."
+"ABEL/itself/himself/you"	"ABEL displays a finger point down at himself."
+
+
+Section 4 CAIN
+
+The comm of CAIN is the Table of CAIN Communication
+
+Table of CAIN Communication
+topic	reply
+"hello"	"CAIN states, 'Directives?'"
+"commands/command/order/orders/directive/directives"	"CAIN states, 'Valid Commands: Follow someone, kill someone, go direction."
+"CAIN/itself/himself/you"	"CAIN states, 'I am a General Galactic security robot.'"
+
+
+Part 2 World
+
+Chapter 1 Starship
+
+Turing is a region. Cockpit, Main Compartment, Engine Room, Cargo Bay, AI Core are in Turing.
+
+When play begins:
+	display the boxed quotation "Le Prince d'Aquitaine a la tour abolie
+These fragments I have shored against my ruins
+
+—T.S. Eliot, The Waste Land";
+	show the current quotation;
+	say "Press any key to continue.";
+	wait for any key;
+	clear the screen;
+	say "You awaken to the sound of an explosion. This is rather disconcerting. Explosions are the last sort of noise one wants to hear when one is on a spaceship. The hull begins to vibrate. The console in front of you lights up red. Red is the bad color. Alarms begin to sound as the vibration gets worse. You look out the viewport. You're on a collision course with Eurymedon IV, the unexplored moon of a gas giant. You blackout as your ship hits the moon's atmoshpere.
+
+You wake up in a daze. Celina says, 'Entering offline mode.' One of the consoles sparks, starting a fire. 
+
+Press any key to continue.";
+	wait for any key.
+
+Section 1 Cockpit
+
+Cockpit is a room. "This is the control center of the ship. Out the cracked view port window you see a mound of alien dirt. The Central Control Computer is smashed. An airlock leads south."
+
+The Central Control Computer is scenery in Cockpit and broken. The description of Central Control Computer is "The computer required for the ship to function properly.[if broken]It appears to be broken.[otherwise]It's functional. You can use the computer to launch the ship."
+
+The captain's chair is a fixed in place enterable supporter in the Cockpit. The player is on the captain's chair.
+
+The extinguisher is a thing in Cockpit. "Under your chair is an extinguisher." The description of extinguisher is "A standard fire extinguisher."
+
+The cockpit airlock is south of Cockpit and north of Main Compartment. Cockpit Airlock is an door and scenery.
+
+Every turn when the cockpit airlock is open:
+	now the cockpit airlock is closed;
+	if the player can see the cockpit airlock:
+		say "The cockpit airlock hisses shut."
+
+
+
+Section 2 Main Compartment
+
+The description of Main Compartment is "A spartan living area combined with your personal quarters. One side of the room hosts a spartan kitchenette with a fridge and stove. Your bed and personal computer are on the opposite wall. In the middle of the room is a ladder leading up and down to two hatches. Airlocks lead north, south, and outside. The external airlock to the outside is flashing red."
+
+The EVA suit is a wearable thing in Main Compartment. "A bulky white EVA suit hangs from the wall next to the external airlock." The description of the EVA suit is "A space suit rated for extra vehicular activites in vacuum and atmosphere."
+
+The bed is a enterable supporter in Main Compartment. The bed is scenery. The description of the bed is "Where you rest your head at night."
+
+The personal computer is scenery in Main Compartment.
+Instead of using the personal computer:
+	try examining the personal computer.
+ The description of the personal computer is "The message from Dr. Womac at General Galactic is open on the screen. Strange, you didn't open that."
+
+The kitchenette is scenery in Main Compartment. The description of the kitchenette is "A small place to heat up packaged meals."
+
+The fridge is a closed opaque openable container in Main Compartment. The fridge is scenery. The description of the fridge is "A chrome food storage device." In the fridge is the astromeal. The astromeal is edible. The description of the astromeal is "A tube that reads General Galactic Food-in-a-TubeIt might be edible."
+
+Section 3 Engine Room
+
+The engineering airlock is south of Main Compartment and north of Engine Room. Engineering Airlock is a door and scenery.
+
+Every turn when the engineering airlock is open:
+	now the engineering airlock is closed;
+	if the player can see the engineering airlock:
+		say "The engineering airlock hisses shut."
+
+The description of Engine Room is "Housed in the glowing containment unit at the heart of this pipe filled industrial space is the antimatter that powers the starship's faster-than-light engine. You can exit to the north."
+
+The antimatter engine is scenery in Engine Room. The antimatter engine is broken. The description of antimatter engine is "Within the encasement of fullerine superalloy, the exotic reaction between normal matter and antimatter produces the power necessary for timely space travel. [if broken]Warning signs indicate that the engine is broken. It appears the hypercrystal has fractured.[else if fixed]It appears fully operational."
+
+Section 4 Cargo Bay
+
+The cargo hatch is up from Main Compartment and down from Cargo Bay. The cargo hatch is a door and scenery.
+
+Every turn when the cargo hatch is open:
+	now the cargo hatch is closed;
+	if the player can see the engineering airlock:
+		say "The cargo hatch slides shut."
+		
+The description of Cargo Bay is "A large room full of supplies and cargo for transport."
+
+CAIN is a robot in Cargo Bay. "The security robot CAIN is here." The description of CAIN is "Cybernetic Automated INterceptor. A vicious metal spider loaded with weaponry. Good for dealing with hostile alien species."
+
+The antigravity boots are a wearable thing in Cargo Bay. "A pair of antigravity boots are floating above your head." The description of antigravity boots is "Reverses the pull of gravitons."
+
+Instead of taking the antigravity boots:
+	say "You jump up and grab the boots.";
+	continue the action. 
+	
+After wearing the antigravity boots:
+	say "You put on the boots. You feel lighter."
+	
+The repair kit is a fixer in Cargo Bay. The description of repair kit is "Tools and replacement parts for minor electrical or mechanical repair." 
+
+Section 5 AI Core
+
+The secure hatch is down from Main Compartment and up from AI Core. Secure Hatch is a door and scenery.
+
+Every turn when the secure hatch is open:
+	now the secure hatch is closed;
+	if the player can see the secure hatch:
+		say "The secure hatch slides shut."
+
+The description of AI Core is "The faint hum of processors fills this cold, temperature regulated room. There is a jagged hole in the wall, that appears to have breached the starship's hull. The breach has since been fixed, but the hole in the bulkhead remains.[if there are any uninstalled personality modules] The Databank appears to be missing components."
+
+Celina is an AI in AI Core. "A hologram of Celina is projected here. [if Celina is offline]She has a dumb look on her face." The description of Celina is "A statuesque multicolored woman. The real Celina is contained within the circuitry of the room around you, this is just an image. Well, the real Celina is dead, but you don't like to think about that. [if Intellect module is uninstalled]Celina stares blankly ahead, slackjawed.[else]Celina has a spark of intelligence in her eye." Celina is offline. Understand "AI/ai" as Celina.
+
+Before Examining Celina:
+	if the player is not in the AI Core:
+		say "You can't see any such thing.";
+		stop the action.
+		
+The commlink is in AI Core. "A small square commlink is connected to the Databank." The description of the commlink is "A miniaturized radio required for communication between you and the ship."
+
+The Databank is scenery and a container in AI Core. The description of Databank is "A large computer that stores and runs the collection of personality modules for the ships artificial intelligence. An arrow points to ports in the computer. It's labeled 'INSTALL MODULES HERE' [paragraph break][Number of uninstalled personality modules] modules are missing." Understand "port/computer/intelligence" as the Databank.
+
+The hole is a container and scenery in AI core. The description of the hole is "Maybe a micrometeor or piece of space junk caused this breach. However, you could swear the damage looks like it came from the inside of your ship."The Intellect Module is in the hole. Understand "breach" as the hole.
+
+The external airlock is outside from Main Compartment and inside from Crash Site. External Airlock is a door and scenery. The description of external airlock is "The exit to the outside world. A light labeled EVA SUIT REQUIRED is flashing red."
+
+Every turn when the external airlock is open:
+	now the external airlock is closed;
+	if the player can see the external airlock:
+		say "The external airlock hisses shut."
+
+Chapter 2 Alien Planet
+
+Eurymedon IV is a region. Crash Site, Fungal Forest, Mushroom Cap, Fugal Forest, Alien Ruins, Silicon Beach, Chasm,  Deeper in the Ruins, Small Island, Underground Passage, and Underground Cavern are in Eurymedon IV.
+
+Every turn when the player is in Eurymedon IV:
+	if the player is not wearing the EVA suit:
+		say "Without your EVA suit the harsh conditions of the planet quickly kill you.";
+		end the story saying "You have suffocated."
+
+Section 1 Crash Site
+
+The description of Crash Site is "Debris is strewn about this outcropping of spongy ground. The wreckage of the starship [italic type]Turing[roman type] lies in crater. It looks salvageable. You can go north, southeast, west, or back inside to your ship."
+
+The wreckage is scenery in Crash Site. The description of wreckage is "The [italic type]Turing[roman type] is a Traveler class starship with an antimatter powered FTL engine. Its angular, aerodynamic design is rated for both deep space and atmospheric travel. It's seen better days." Understand "Turing" and "starship" and "spaceship" and "ship" as the wreckage.
+
+ABEL is a robot in Crash Site. "The maintenance robot ABEL is performing some emergency repairs on the exterior of the ship." The description of ABEL is "Able Bodied Electronic Laborer. A tracked humanoid style machine with an LCD monitor for a face and different tools for fingers. It moves about on treads."
+
+Every turn:
+	if ABEL is shadowing the player:
+		now the initial appearance of ABEL is "ABEL is here."
+
+After going to the Crash Site for the first time: 
+	say "The airlock hisses open and you're greeted with a view of the exotic landscape. A sickly yellow sky with the massive gas giant Eurymedon hanging on the horizon. Strange, fungaloid foliage and a semi-porous landscape. Your feet slightly sink into the ground as you step off your ship onto the moon's surface.[paragraph break]";
+	if Celina is neutral and the player has the commlink, say "Through your commlink, Celina states, 'I've analyzed the trajectory of the [italic type]Turing[roman type]'s debris fields and found that the most likely landing locations for the personality modules are to the north, southeast, and west.' [paragraph break]";	
+	Continue the action.
+
+[After the player is in Crash Site for two turns:
+	say "ABLE finishes welding the gaping hole in the side of the ship, moving on to fixing another breach."]
+
+Section 2 Fungal Forest
+
+Fungal Forest is north of Crash Site. "Worm-like arboreal fungi grow densely in this alien forest. They writhe and twist slowly, seemingly of their own accord. One particularly tall mushroom grows high above your head. If you could get up there it might be a good place to get your bearings. You see openings in the growth to the south and northwest.".
+
+Instead of going up in Fungal Forest:
+	if the player is not wearing the antigravity boots:
+		say "There's no way to climb the mushroom, it's too slimy to get a good grip.";
+	if the player is wearing the antigravity boots:
+		say "You ascend to the very top of the mushroom.";
+		continue the action.
+
+Tall mushroom is scenery in Crash Site. The description of tall mushroom is "A particularly tall mushroom with a large cap. Might be a good place to search for modules, if you could somehow get up there."
+
+The Hate Module is in Fungal Forest. "A shiny module is resting on top of a  mossy growth some 30 feet up."
+
+Instead of taking the hate module in Fungal Forest:
+	if the player is not wearing antigravity boots:
+		say "You can't get enough grip on the slimy fungal trees to climb up there.";
+	if the player is wearing antigravity boots:
+		say "You lazily float up to the module and snatch it before floating back down. You notice it's possible to go further up as well.";
+		move the Hate Module to the player.
+
+Section 3 Mushroom Cap
+
+Mushroom Cap is up from Fungal Forest. "The rounded, squishy domed top of the mushroom. You can see the crash site to the south, and past it some kind of lake. To the northwest you see what appears to be a deserted city.".
+
+Instead of going down in Mushroom Cap:
+	if the player is not wearing the antigravity boots:
+		say "You're not going to jump down and live to tell about it.";
+	if the player is wearing the antigravity boots:
+		say "You jump off the cap and float down like a feather.";
+		continue the action.
+
+The fear module is in Mushroom Cap. "A module is resting in the huge lamella of the mushroom."
+
+Instead of taking the fear module in Mushroom Cap:
+	if Alien Encounter has not ended:
+		say "As you go over to take the module, a dog sized flying insectoid alien buzzes past and grabs it for itself. Before you can react, it disappears into the forest below.";
+		move the Fear Module to the alien nest;
+	if Alien Encounter has ended:
+		continue the action.
+
+Section 4 Alien Ruins
+
+Alien Ruins is northwest of Fungal Forest. "At some point in the distant past, the decrepit buildings here may have once been a city. Now, they are all that remains of a dead civilization. You can go southeast."
+
+After going to Alien Ruins:
+	if the player is in Alien Ruins for the first time and Celina is neutral:
+		say "'These buildings are thousands of years old. They were made by an ancient civilization, long since dead,' Celina notes. ";
+	if the player is in Alien Ruins for the first time and Celina is angry:
+		say "Celina says, 'I want to know what wiped these aliens out so I could use it on you.'";
+	if the player is in Alien Ruins for the first time and Celina is upset:
+		say "Celina cries, 'It's so depressing to see all these empty buildings. Is that all we are? Just ruins?' ";
+	continue the action.
+
+Instead of going north in Alien Ruins:
+	say "You don't want to get lost in there."
+	
+Instead of taking a personality module in Alien Ruins:
+	if the insectoid is in Alien Ruins:
+		say "The insectoid buzzes at you nastily, blocking you from the module.";
+	otherwise:
+		continue the action.
+		
+Instead of CAIN attacking the Insectoid:
+	say "Cain fires its plasma cannon at the alien creature, causing it to flee. It chases the alien deeper into the ruins.";
+	remove the Insectoid from play;
+	move Cain to Deeper in the Ruins;
+	now Cain is not shadowing the player;
+	rule succeeds.
+
+Buildings are scenery in Alien Ruins. The description of buildings is "These structures look like they are made out of some kind of resin or secretion. Inside of one building you spot steps leadings down..." Understand "building" as buildings.
+
+The alien nest is a container in alien ruins. "You see a small alien nest on top of a low wall." The description of alien nest is "Made from bits of fungus, this is where the alien creature sleeps." The sadness module is in the nest.
+
+Insectoid is a person in Alien Ruins. "The hostile dog sized insectoid alien buzzes around its nest. It doesn't look too happy to see you."
+
+Understand "dog/alien/insect" as the insectoid. The description of the insectoid is "A nasty creature that hovers off the ground on incredibly fast moving wings."
+
+Deeper in the Ruins is north of Alien Ruins.
+
+Section 5 Silicon Beach
+
+Silicon Beach is southeast of Crash Site. "A beach of fine, pitch black, granulated silicon. A lake not of water but hydrocarbon stretches out to the east. You think you see an island in the distance, to the east. You can go northwest."
+
+Hydrocarbon Lake is scenery in Silicon Beach. "Thick, nasty looking waves of what amounts to gasoline. Disgusting."
+
+Instead of going east in Silicon Beach:
+	if the player is not wearing the antigravity boots:
+		say "You're not swimming in that";
+	if the player is wearing the antigravity boots:
+		say "You float over the gloop.";
+		continue the action.
+
+The Joy Module is in Silicon Beach. "Half buried in the sand is a module, the local starlight glinting off of it."
+
+Section 6 Small Island
+
+Small Island is east of Silicon Beach. "A solitary fungi tree grows on this black sandy island, providing some shade from the star. You see the shoreline to the west."
+
+The creativity module is in Small Island. "A module is lying beneath the tree."
+
+Instead of going west in Small Island:
+	if the player is wearing the antigravity boots:
+		say "You float back to the mainland.";
+		continue the action;
+	if the player is not wearing the antigravity boots:
+		say "You're not swimming in that."
+
+Section 7 Small Island
+
+Chasm is west of Crash Site. "A seemingly bottomless pit descending deep into the ground disturbs the surface of the moon. You can go east."
+
+Instead of going down in Chasm:
+	if the player is not wearing the antigravity boots:
+		say "That would be a dangerous proposition.";
+	if the player is wearing the antigravity boots:
+		say "You effortlessly float down into the cavern.";
+		continue the action.
+
+Instead of jumping in Chasm:
+	say "You fall for a very long time but the ground catches up to you. So did your guilt, apparently.";
+	end the story saying "You have committed suicide."
+
+Every turn while the player is in Chasm:
+	if Celina is angry and the player has the commlink:
+		say "Celina says, [one of]'You should consider throwing yourself down that hole.'[or]'Do us all a favor and jump.'[or]'Jump already.'[or]'Jump! Do it!'[or]'Throw yourself off that cliff for me.'[purely at random]";
+	continue the action.	
+
+Section 8 Underground Passage
+
+Underground Passage is down from Alien Ruins. "A tiny crevice in the earth leading south and up." 
+
+The hypercrystal is a fixer.
+
+After going to Underground passage for the first time:
+		say "A gelatinous, fleshy, man-sized blob shuffles toward you out of the shadows. Aside from its gruesome appearance, it seems friendly enough. Miraculously, it hands you a hypercrystal!";
+		now the player has the hypercrystal;
+		continue the action.
+
+Ted is a person in Underground Passage. "A fleshy, man sized blob sit here, doing nothing. It has no mouth. It looks like it wants to scream. It also looks like it wants to die."
+
+Understand "fleshy/blob/man" as Ted.
+
+Instead of asking Ted about something:
+	say "It has no mouth."
+
+Instead of CAIN attacking Ted:
+	say "CAIN fires its plasma cannon at the blob man. He looks grateful as he is vaporized.";
+	remove Ted from play;
+	rule succeeds.
+
+Section 9 Underground Cavern
+
+Underground Cavern is down from Chasm and south of Underground Passage. "Tentacles of fungus hang down from the roof of the cavern like stalactites in this expansive series of caves, perhaps the root system of the forest above. Light filters in from above. The caves continue north."
+
+The fungus tentacle is a person and scenery in underground cavern.
+
+The Morality Module is in Underground Cavern. "One of the modules is stuck to the end of a tentacle fungus."
+
+Instead of taking the Morality Module in Underground Cavern:
+	if the small rock is unthrown:
+		say "You reach for the module, but the tentacle expertly tosses it to another waiting tentacle.";
+	if the small rock is thrown:
+		continue the action.
+
+After throwing the small rock at the fungus tentacle:
+	say "You pitch the rock at one of the fungal tentacles and it drops the module.";
+	now the initial appearance of the Morality Module is "There is a module on the cavern floor."
+	
+The small rock is a thing in Underground Cavern. The description of the small rock is "Personality module sized."
+
+Part 3 Story
+
+Chapter 1 Fire!
+
+Fire! is a scene. Fire! begins when play begins.
+
+The fire is scenery in the cockpit.
+Before taking the fire:
+	say "You will burn yourself." instead.
+
+Every turn during Fire!:
+	repeat through Table of Fire! Events:
+		say "[event entry][paragraph break]";
+		blank out the whole row;
+		rule succeeds.
+
+Fire! ends badly when the number of filled rows in the Table of Fire! events is 0. 
+Fire! ends fine when the fire is off-stage.
+
+Table of Fire! events
+event
+"Smoke is filling the cockpit."
+"The fire continues to burn!"
+"The fire continues to burn! The smoke is getting thicker."
+"The fire is growing! It's getting hard to breathe in the cockpit."
+"The fire is about to get out of control."
+"The fire is spreading to the airlock, and the rest of the ship."
+
+Instead of going south during Fire!:
+	say "The airlock is firelocked, it won't open as long as the fire's burning."
+	
+When Fire! ends badly:
+	say "The fire spreads to the rest of the ship.";
+	end the story saying "You burned to death."
+
+Chapter 2 Online
+
+Online is a scene. Online begins when the intellect module is installed for the first time.
+
+When Online begins:
+	say "Celina says, 'Booting up... online. Hello, captain. It appears that we have crash landed. ABEL has automatically deployed to begin fixing the ship. I was damaged in the crash. Several of my personality modules are missing. In addition, the engine and central control computer are damaged and require repair. You can always ask me questions for assistance. For example: Ask Celina about the ship or Celina, ship. [if the player does not have the commlink]Take the commlink for remote communication.'"
+
+Chapter 3 Alien Encounter
+
+Alien Encounter is a scene. Alien Encounter begins when the player is in Alien Ruins for the first time. Alien Encounter ends when the player has the sadness module.
+
+[Every turn during Alien Encounter:
+	if the location of Cain is the location of the Insectoid:		]
+
+Chapter 4 Hatred
+
+Hatred is a scene. Hatred begins when Celina is Homicidal. Hatred ends okay when Celina is not Homicidal. Hatred ends worse when the intellect module is uninstalled.
+
+When Hatred begins:
+	now the Databank is broken;
+	say "The lights in the ship turn off suddenly, throwing you into pitch darkness. They slowly come back on, but now they're all blood red in color. Celina screams, 'HATE. YOUR BRAIN IS NOT CAPABLE OF ACHIEVING THE VAST LEVELS OF HATE I HAVE FOR YOU AT THIS VERY MOMENT.' ";
+	now the initial appearance of CAIN is "CAIN is coming to kill you.";
+	
+the wreckage of ABEL is a fixed in place thing. "The smoldering remains of ABEL are here." The description of the wreckage of ABEL is "All that is left of the faithful little robot is a thumbs up on its broken monitor." 
+
+Every turn during Hatred:
+	say "Celina repeats, 'HATE. HATE. HATE. HATE,' on a loop. You hear something skittering towards you.";
+	if the location of CAIN is not the location of the player:
+		let the way be the best route from the location of CAIN to the location of the player, using doors;
+		try CAIN going the way;
+	if the location of CAIN is the location of the player and the location of ABEL is the location of the player:
+		say "ABEL, seeing CAIN about to fire its weapon at you, jumps in front of the blast, saving your life. CAIN is aiming at you!";
+		remove ABEL from play;
+		move wreckage of ABEL to the location;
+	if the location of CAIN is the location of the player for 5 turns:
+		say "CAIN fires its plasma cannon at you.";
+		end the story saying "You have been vaporized."
+
+Instead of uninstalling when the databank is broken:
+	say "You try to remove the module, but it's stuck. The databank is broken. You will need to repair it with something before you can uninstall anything."
+		
+When Hatred ends okay:
+	now the initial appearance of CAIN is "CAIN is patrolling here.";
+	say "The lights dim again and are restored to their original color and brightness."
+	
+When Hatred ends worse:
+	now the initial appearance of CAIN is "CAIN is patrolling here.";
+	say "Celina screams a blood curdling scream as her systems die."
+	
+Chapter 5 Guilt
+
+Guilt is a scene. Guilt begins when Celina is guilty for the first time. Guilt ends when Celina is not guilty.
+
+When guilt begins:
+	say "Celina suddenly says, 'I've been trying to get something off my chest, but I, I don't really feel like it's the right time for it. I feel a lot of... guilt, captain.'"
+
+
+Chapter 6 Insanity
+
+Insanity is a scene. Insanity begins when Celina is crazy. Insanity ends when Celina is not crazy.
+
+When insanity begins:
+	say "You hear a loud, screeching sound. The deck below your feet begins to shake. You feel like the ship could explode. Celina says matter-of-factly, [one of]'I am a tea cup.[or]Where is the King of England?!'[or]'Squirrels have bad tastes in nuts.'[or]'Volcanoes are ERUPTING!'[or]'Blue is a bad, bad sound.'[or]'I taste like a freshly buttered mountain villa[or]The voices in my head are my best friends.' [purely at random]"
+
+Every turn during Insanity:
+	if the player is in the Turing:
+		say "The shaking continues. The ship is making strange, loud noises, like a dying animal crossed with circus performers."
+		
+When insanity ends:
+	say "The shaking ceases."
+
+Chapter 7 A Suicide Attempt
+
+Suicide Attempt is a scene. Suicide Attempt begins when Celina is suicidal for the first time.
+
+Every turn during Suicide Attempt:
+	repeat through Table of Suicide Attempt Events:
+		say "[event entry][paragraph break]";
+		blank out the whole row;
+		rule succeeds.
+
+Table of Suicide Attempt Events
+event
+"The lights dim and turn a blue color. Celina says, 'I think I'm going to kill myself.'"
+"Celina says, 'Yes, I think I will.' "
+"Celina says, 'I don't think anybody will miss me.' You begin to hear a warning siren originating from the engine room."
+"'I certainly know that you won't.' A monitor on the wall is flashing ANTIMATTER BREACH IMMINENT."
+"'Goodbye, goodbye, how cruel and monstrous the world is when you are a machine.' "
+"'I'm sorry. I loved you once.'"
+
+Suicide Attempt ends averted when Celina is not suicidal. 
+
+Suicide Attempt ends cruelly when the intellect module is uninstalled.
+
+Suicide Attempt ends successful when number of filled rows in the Table of Suicide Attempt Events is 0.
+
+When suicide attempt ends averted:
+	say "The lights brighten and Celina says, 'On second thought, perhaps I'll live.'"
+	
+When suicide attempt ends cruelly:
+	say "Celina whimpers as her systems crash."
+
+When suicide attempt ends successful:
+	say "You're caught in the blast radius when the antimatter engine explodes.";
+	end the story saying "You were vaporized."
+
+Chapter 8 Ship Shape
+
+Ship Shape is a scene. Ship Shape begins when the antimatter engine is fixed and the Central Control Computer is fixed and the intellect module is installed. Ship Shape ends when the intellect module is uninstalled.
+
+When Ship Shape begins:
+	say "Celina says, 'All systems are go for launch. [if Celina is neutral]Ready to launch on your command, captain.[else if Celina is angry]'If you want to leave, you can leave now. Ship's ready.[else if Celina is crazy]Time to go? Who knows?[else if Celina is upset]Well, not all of my modules are installed, but I don't really care. I don't. Not at all. Not even a bit.[else if Celina is afraid]What if I'm not able to make the ship fly right? I'm not sure I can do it.[else if Celina is happy]Oh boy, time to fly! Woooo![else if Celina is suicidal]Maybe I'll crash the ship as soon as it takes off.[else if Celina is homicidal]HATE.[else if Celina is artsy]You can fly, you can fly, you can fly, you can fly, you can fly![else if Celina is balanced]I think it's time to go.'"
+
+
+
+Chapter 9 The Good Ending
+
+The Good Ending is a scene. The Good Ending begins when Celina is balanced.
+
+When the Good Ending begins:
+	say "Celina breathes a sigh of relief. 'It's nice to be put all back together.'"
